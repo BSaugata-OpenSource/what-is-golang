@@ -1,8 +1,7 @@
 name: Build and Publish Go projects
 
 on:
-  push: 
-    branches: [main]
+  workflow_dispatch:
 
 jobs:
   log_context_values:
