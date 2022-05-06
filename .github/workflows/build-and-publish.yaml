@@ -3,8 +3,15 @@ name: Build and Publish Go projects
 on:
   workflow_dispatch:
 
+  workflow_call:
+    inputs:
+      imagetag:
+        required: true
+        type: string
+
 jobs:
   log_context_values:
+    name: Log Context Values
     runs-on: ubuntu-latest
     steps:
       - name: Log Github Context
