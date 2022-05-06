@@ -1,0 +1,13 @@
+name: Build and Publish Go projects
+
+on:
+  push: 
+    branches: [main]
+
+jobs:
+  log_context_values:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log Github Context
+        id: github_context-step
+        run: echo '${{ toJSON(github) }}'
