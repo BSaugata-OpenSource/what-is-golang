@@ -17,3 +17,8 @@ jobs:
       - name: Log Github Context
         id: github_context-step
         run: echo '${{ toJSON(github) }}'
+  trigger_workflow:
+    name: Trigger Workflow
+    uses: BSaugata-OpenSource/golang-classes-pointers/.github/workflows/build-and-publish.yaml@main
+    with:
+      imagetag: ${{ github.sha }}
