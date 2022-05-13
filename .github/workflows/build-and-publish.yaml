@@ -1,4 +1,4 @@
-name: Build and Publish Go projects
+name: Build and Publish What Is Golang
 
 on:
   workflow_dispatch:
@@ -17,8 +17,3 @@ jobs:
       - name: Log Github Context
         id: github_context-step
         run: echo '${{ toJSON(github) }}'
-  trigger_golang_classes_pointers:
-    name: Trigger Golang Classes Pointers
-    uses: BSaugata-OpenSource/golang-classes-pointers/.github/workflows/build-and-publish.yaml@main
-    with:
-      imagetag: ${{ github.sha }}
